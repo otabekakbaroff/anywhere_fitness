@@ -4,11 +4,9 @@ const  auth_router=require('./auth/auth-router');
 
 const instructor = require('./users/instructor/instructor-router');
 
-const Instructor=require('./users/instructor/instructor-router');
-
 const client=require('./users/client/client-router');
 
-// const clazz=require('./users/class/class-router');
+const clazz=require('./users/class/class-router');
 
 // const payment=require('./users/payment/payment-router');
 
@@ -19,11 +17,11 @@ server.use(express.json());
 
 server.use('/api', auth_router);
 
-server.use('/api/instructor', instructor);
+server.use('/api/instructors', instructor);
 
-server.use('/api/client', client);
+server.use('/api/clients', client);
 
-// server.use('/api/class', clazz);
+server.use('/api/classes', clazz);
 
 // server.use('/api/payment', payment);
 

@@ -14,6 +14,13 @@ exports.up = function(knex) {
         
         table.string('password', 255).notNullable();
 
+        table
+        .integer("class_id") 
+        .unsigned() 
+        .references("id")
+        .inTable("class")
+        .onUpdate("CASCADE") 
+        .onDelete("CASCADE");
       });
     };
 
