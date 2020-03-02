@@ -56,7 +56,7 @@ POST https://anywherefitnezz.herokuapp.com/api/client/register <------REGISTER A
 ```
 
 
-           *****CLIENT REGISTER INPUT EXAMPLE*****
+          ## CLIENT REGISTER INPUT EXAMPLE ##
            
            
 ###
