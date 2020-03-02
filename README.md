@@ -7,7 +7,7 @@ GET REQUEST https://anywherefitnezz.herokuapp.com/api/instructors <----- GET ALL
 ```
 
 ```
-GET REQUEST https://anywherefitnezz.herokuapp.com/api/instructors/1 <---- WILL SELECT FIRST INSTRUCTOR IN THE LIST 
+GET REQUEST https://anywherefitnezz.herokuapp.com/api/instructors/1 <-- WILL SELECT FIRST INSTRUCTOR IN THE LIST 
 ```
 
 ```
@@ -15,7 +15,7 @@ GET REQUEST  https://anywherefitnezz.herokuapp.com/api/clients <----- GET ALL CL
 ```
 
 ```
-GET REQUEST   https://anywherefitnezz.herokuapp.com/api/clients/1 <----- WILL SELECT FIRST CLIENT IN THE LIST
+GET REQUEST   https://anywherefitnezz.herokuapp.com/api/clients/1 <-- WILL SELECT FIRST CLIENT IN THE LIST
 ```
 
 ```
