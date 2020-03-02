@@ -1,6 +1,6 @@
 # anywhere_fitness
 
-############################################# GET REQUESTS##########################################
+################### GET REQUESTS ###################
 GET REQUEST https://anywherefitnezz.herokuapp.com/api/instructors <----- GET ALL INSTRUCTORS
 
 GET REQUEST https://anywherefitnezz.herokuapp.com/api/instructors/1 <---- WILL SELECT FIRST INSTRUCTOR IN THE LIST 
@@ -15,9 +15,7 @@ GET REQUEST https://anywherefitnezz.herokuapp.com/api/classes/1 <---- WILL SELEC
 
 GET REQUEST https://anywherefitnezz.herokuapp.com/api/classes/1/clients <---- GET ALL CLIENTS THAT ARE IN THAT CLASS
 
-
-
-############################################## POST REQUESTS ###########################################
+################### POST REQUESTS ###################
 
 POST https://anywherefitnezz.herokuapp.com/api/instructor/register <----- REGISTER AS INSTRUCTOR
 
@@ -72,7 +70,7 @@ POST REQUEST https://anywherefitnezz.herokuapp.com/api/classes <-----CREATING CL
 },
 
 
-########################################### PUT REQUESTS #########################################
+################### PUT REQUESTS ###################
 
 
 
