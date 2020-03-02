@@ -38,7 +38,7 @@ GET REQUEST https://anywherefitnezz.herokuapp.com/api/classes/1/clients <--GET A
 POST https://anywherefitnezz.herokuapp.com/api/instructor/register <----- REGISTER AS INSTRUCTOR
 ```
 
-##### INSTRUCTOR REGISTER INPUT EXAMPLE #####
+#### INSTRUCTOR REGISTER INPUT EXAMPLE ####
               
 ###        
 
@@ -56,7 +56,7 @@ POST https://anywherefitnezz.herokuapp.com/api/client/register <------REGISTER A
 ```
 
 
-##### CLIENT REGISTER INPUT EXAMPLE #####
+#### CLIENT REGISTER INPUT EXAMPLE ####
            
            
 ###
@@ -72,7 +72,7 @@ POST https://anywherefitnezz.herokuapp.com/api/client/register <------REGISTER A
 POST REQUEST https://anywherefitnezz.herokuapp.com/api/instructor/login <---- LOGGING IN AS INSTRUCTOR
 ```
 
-              ***** ACTUAL INSTRUCTOR WORKING LOGIN *****
+#### ACTUAL INSTRUCTOR WORKING LOGIN ####
               
               
 ###
@@ -85,7 +85,7 @@ POST REQUEST https://anywherefitnezz.herokuapp.com/api/instructor/login <---- LO
 POST REQUEST https://anywherefitnezz.herokuapp.com/api/client/login <----LOGGING IN AS CLIENT
 ```
 
-                 ***** ACTUAL CLIENT WORKING LOGIN *****
+#### ACTUAL CLIENT WORKING LOGIN ####
                  
                  
 ###
@@ -97,7 +97,7 @@ POST REQUEST https://anywherefitnezz.herokuapp.com/api/client/login <----LOGGING
 POST REQUEST https://anywherefitnezz.herokuapp.com/api/classes <-----CREATING CLASSES
 ```
 
-             ***** CREATING CLASSES EXAMPLE*****
+#### CREATING CLASSES EXAMPLE ####
 
 
 ###
