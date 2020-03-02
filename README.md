@@ -3,7 +3,7 @@
 ***GET REQUESTS*** 
 
 
-**GET REQUEST https://anywherefitnezz.herokuapp.com/api/instructors <----- GET ALL INSTRUCTORS
+**GET REQUEST https://anywherefitnezz.herokuapp.com/api/instructors <----- GET ALL INSTRUCTORS**
 
 
 **GET REQUEST https://anywherefitnezz.herokuapp.com/api/instructors/1 <---- WILL SELECT FIRST INSTRUCTOR IN THE LIST 
