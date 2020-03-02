@@ -59,13 +59,13 @@ POST https://anywherefitnezz.herokuapp.com/api/client/register <------REGISTER A
            *****CLIENT REGISTER INPUT EXAMPLE*****
            
            
-{
+###
         "name": "Joseph", <---- NOT REQUIRED BUT JUST DO IT, DONT BE LAZY
         "contactInfo": "client1@gmail.com",
         "username": "client1", <------REQUIRED
         "password": "123", <------REQUIRED
         "class_id": 1 <-----ID OF A CLASS YOU WANT TO SIGN UP TO(NOT REQUIRED)
-}
+###
 
 
 ```
@@ -75,10 +75,10 @@ POST REQUEST https://anywherefitnezz.herokuapp.com/api/instructor/login <---- LO
               ***** ACTUAL INSTRUCTOR WORKING LOGIN *****
               
               
-{
+###
   "username": "client1",
   "password": "123"
-}
+###
 
 
 ```
@@ -88,10 +88,10 @@ POST REQUEST https://anywherefitnezz.herokuapp.com/api/client/login <----LOGGING
                  ***** ACTUAL CLIENT WORKING LOGIN *****
                  
                  
-{
+###
   "username": "zap",
   "password": "123"
-}
+###
 
 ```
 POST REQUEST https://anywherefitnezz.herokuapp.com/api/classes <-----CREATING CLASSES
@@ -100,7 +100,7 @@ POST REQUEST https://anywherefitnezz.herokuapp.com/api/classes <-----CREATING CL
              ***** CREATING CLASSES EXAMPLE*****
 
 
- {
+###
         "class_name": "NewGoals2020",  <----------REQUIRED
         "description": "Learn art of Sambo",
         "duration": "2 hours",
@@ -109,7 +109,7 @@ POST REQUEST https://anywherefitnezz.herokuapp.com/api/classes <-----CREATING CL
         "dateAndTime": "11/11/11 2:00PM PST",   <-------------------REQUIRED
         "active": true,
         "instructor_id": 1 <--------------ID OF AN INSTRUCTOR THAT IS TEACHING THE CLASS(REQUIRED)
-},
+###
 
 
 
