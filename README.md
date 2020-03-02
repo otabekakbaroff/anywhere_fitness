@@ -41,13 +41,13 @@ POST https://anywherefitnezz.herokuapp.com/api/instructor/register <----- REGIST
               *****INSTRUCTOR REGISTER INPUT EXAMPLE*****
               
 ###        
-{
+
         "name": "Zack", <----------REQUIRED 
         "contactInfo": "Zack@gmail.com", 
         "status": "Sambo Instructor", <------REQUIRED
         "username": "zap",     <-------REQUIRED
         "password": "123"    <------REQUIRED
-}
+
 ###
 
 
