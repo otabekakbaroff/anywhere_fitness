@@ -76,8 +76,8 @@ POST REQUEST https://anywherefitnezz.herokuapp.com/api/instructor/login <---- LO
               
               
 ###
-  "username": "client1",
-  "password": "123"
+      "username": "client1",
+      "password": "123"
 ###
 
 
@@ -89,8 +89,8 @@ POST REQUEST https://anywherefitnezz.herokuapp.com/api/client/login <----LOGGING
                  
                  
 ###
-  "username": "zap",
-  "password": "123"
+      "username": "zap",
+      "password": "123"
 ###
 
 ```
