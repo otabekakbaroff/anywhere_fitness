@@ -2,11 +2,11 @@ const express = require('express');
 
 // const Instructor = require('./users/instructor-router');
 
-const  auth_router=require('./auth/auth-router');
+// const  auth_router=require('./auth/auth-router');
 
-const Instructor=require('./users/instructor/instructor-router');
+// const Instructor=require('./users/instructor/instructor-router');
 
-const client=require('./users/client/client-router');
+// const client=require('./users/client/client-router');
 
 // const clazz=require('./users/class/class-router');
 
@@ -19,9 +19,9 @@ server.use(express.json());
 
 server.use('/api', auth_router);
 
-server.use('/api/instructor', Instructor);
+// server.use('/api/instructor', Instructor);
 
-server.use('/api/client', client);
+// server.use('/api/client', client);
 
 // server.use('/api/class', clazz);
 
