@@ -26,6 +26,7 @@
     "node-pre-gyp": "^0.14.0",
     "nodemon": "^2.0.2",
     "pg": "^7.18.2",
+    "postgresql": "0.0.1",
     "script": "^0.1.4",
     "sqlite3": "^4.1.1"
   }
