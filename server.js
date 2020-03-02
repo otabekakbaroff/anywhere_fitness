@@ -1,10 +1,10 @@
 const express = require('express');
-const  Instructor=require("./users/instructor/instructor-model");
+
 const  auth_router=require('./auth/auth-router');
 
 const instructor = require('./users/instructor/instructor-router');
 
-// const Instructor=require('./users/instructor/instructor-router');
+const Instructor=require('./users/instructor/instructor-router');
 
 const client=require('./users/client/client-router');
 
@@ -19,9 +19,9 @@ server.use(express.json());
 
 server.use('/api', auth_router);
 
-// server.use('/api/instructor', instructor);
+server.use('/api/instructor', instructor);
 
-// server.use('/api/client', client);
+server.use('/api/client', client);
 
 // server.use('/api/class', clazz);
 
@@ -35,13 +35,12 @@ server.get('/', (req,res)=>{
     res.status(200).json(test);
 
 })
-router.get('/instructor', (req, res) => {
-    Instructor.find().then(user=>{
-        res.status(200).json(user);
-    }).catch(err=>{
-        console.log(err);
-        res.status(500).json({errorMessage:'Something Went Wrong'})
-    })
-});
+server.get('/hello', (req,res)=>{
+
+    const test=[{Message:`*** THIS GET WORKS :) ***`}]
+
+    res.status(200).json(test);
+
+})
 
 module.exports = server;

@@ -13,7 +13,7 @@ module.exports = {
   staging: {
     client: 'postgresql',
     connection: {
-      database: 'my_db',
+      database: './data/database.db3',
       user:     'username',
       password: 'password'
     },
@@ -29,7 +29,7 @@ module.exports = {
   production: {
     client: 'postgresql',
     connection: {
-      database: 'my_db',
+      database: './data/database.db3',
       user:     'username',
       password: 'password'
     },
