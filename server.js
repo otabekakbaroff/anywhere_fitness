@@ -17,7 +17,7 @@ const server = express();
 server.use(express.json());
 
 
-server.use('/api', auth_router);
+// server.use('/api', auth_router);
 
 // server.use('/api/instructor', Instructor);
 
