@@ -1,8 +1,8 @@
 const express = require('express');
 
-// const Instructor = require('./users/instructor-router');
-
 const  auth_router=require('./auth/auth-router');
+
+const Instructor = require('./users/instructor-router');
 
 // const Instructor=require('./users/instructor/instructor-router');
 
@@ -19,7 +19,7 @@ server.use(express.json());
 
 server.use('/api', auth_router);
 
-// server.use('/api/instructor', Instructor);
+server.use('/api/instructor', Instructor);
 
 // server.use('/api/client', client);
 
