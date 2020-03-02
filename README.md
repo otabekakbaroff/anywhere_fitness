@@ -40,7 +40,7 @@ POST https://anywherefitnezz.herokuapp.com/api/instructor/register <----- REGIST
 
               *****INSTRUCTOR REGISTER INPUT EXAMPLE*****
               
-Markup :  `code()`             
+>>            
 {
         "name": "Zack", <----------REQUIRED 
         "contactInfo": "Zack@gmail.com", 
@@ -48,7 +48,7 @@ Markup :  `code()`
         "username": "zap",     <-------REQUIRED
         "password": "123"    <------REQUIRED
 }
-
+<<
 
 
 ```
