@@ -116,21 +116,33 @@ POST REQUEST https://anywherefitnezz.herokuapp.com/api/classes <-----CREATING CL
 
 # PUT REQUESTS #
 
+```
+PUT REQUEST https://anywherefitnezz.herokuapp.com/api/instructors/1 <----EDIT INSTRUCTOR INFO WITH ID OF 1(CAN EDIT ANY INFO)
+```
 
-PUT REQUEST https://anywherefitnezz.herokuapp.com/api/instructors/1
+```
+PUT REQUEST https://anywherefitnezz.herokuapp.com/api/clients/1  <----EDIT CLIENT INFO WITH ID OF 1(CAN EDIT ANY INFO)
+```
 
-PUT REQUEST https://anywherefitnezz.herokuapp.com/api/clients/1
+```
+PUT REQUEST https://anywherefitnezz.herokuapp.com/api/classes/1  <----EDIT CLASS INFO WITH ID OF 1(CAN EDIT ANY INFO)
+```
 
-PUT REQUEST https://anywherefitnezz.herokuapp.com/api/classes/1
 
 # DELETE REQUEST #
 
+```
+DELETE REQUEST https://anywherefitnezz.herokuapp.com/api/instructors/1 <--DELETEs INSTRUCTOR WITH ID OF 1
+```
 
-DELETE REQUEST https://anywherefitnezz.herokuapp.com/api/instructors/1
+```
+DELETE REQUEST https://anywherefitnezz.herokuapp.com/api/clients/1 <--DELETES CLIENT WITH ID OF 1
+```
 
-DELETE REQUEST https://anywherefitnezz.herokuapp.com/api/clients/1
 
-DELETE REQUEST https://anywherefitnezz.herokuapp.com/api/classes/1
+```
+DELETE REQUEST https://anywherefitnezz.herokuapp.com/api/classes/1 <--DELETES A CLASS WITH ID OF 1
+```
 
 
 
