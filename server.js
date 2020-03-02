@@ -35,5 +35,12 @@ server.get('/', (req,res)=>{
     res.status(200).json(test);
 
 })
+server.get('/hello', (req,res)=>{
+
+    const test=[{Message:`*** THIS GET WORKS :) ***`}]
+
+    res.status(200).json(test);
+
+})
 
 module.exports = server;
