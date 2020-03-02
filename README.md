@@ -38,7 +38,7 @@ GET REQUEST https://anywherefitnezz.herokuapp.com/api/classes/1/clients <--GET A
 POST https://anywherefitnezz.herokuapp.com/api/instructor/register <----- REGISTER AS INSTRUCTOR
 ```
 
-### INSTRUCTOR REGISTER INPUT EXAMPLE ###
+##### INSTRUCTOR REGISTER INPUT EXAMPLE #####
               
 ###        
 
@@ -56,7 +56,7 @@ POST https://anywherefitnezz.herokuapp.com/api/client/register <------REGISTER A
 ```
 
 
-### CLIENT REGISTER INPUT EXAMPLE ###
+##### CLIENT REGISTER INPUT EXAMPLE #####
            
            
 ###
