@@ -117,5 +117,23 @@ POST REQUEST https://anywherefitnezz.herokuapp.com/api/classes <-----CREATING CL
 # PUT REQUESTS #
 
 
+PUT REQUEST https://anywherefitnezz.herokuapp.com/api/instructors/1
+
+PUT REQUEST https://anywherefitnezz.herokuapp.com/api/clients/1
+
+PUT REQUEST https://anywherefitnezz.herokuapp.com/api/classes/1
+
+# DELETE REQUEST #
+
+
+DELETE REQUEST https://anywherefitnezz.herokuapp.com/api/instructors/1
+
+DELETE REQUEST https://anywherefitnezz.herokuapp.com/api/clients/1
+
+DELETE REQUEST https://anywherefitnezz.herokuapp.com/api/classes/1
+
+
+
+
 
 
