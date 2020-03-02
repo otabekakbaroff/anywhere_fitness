@@ -2,7 +2,7 @@ const express = require('express');
 
 // const Instructor = require('./users/instructor-router');
 
-// const  auth_router=require('./auth/auth-router');
+const  auth_router=require('./auth/auth-router');
 
 // const Instructor=require('./users/instructor/instructor-router');
 
