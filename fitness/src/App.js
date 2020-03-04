@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   useEffect(() => {
     console.log('HEELLOo')
-    axios.get("https://anywherefitnezz.herokuapp.com/").then(response=>{
+    axios.get("http://localhost:5000/api/instructors/").then(response=>{
       console.log('HELLO');
       console.log(response);
     })

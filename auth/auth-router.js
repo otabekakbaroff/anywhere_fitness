@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const Instructor=require('./auth-model');
 const bcrypt=require('bcryptjs');
-
+const jwt=require('jsonwebtoken');
 
 router.get('/hash', (req,res)=>{
     const authentication=req.headers.authentication;
@@ -13,7 +13,20 @@ router.get('/hash', (req,res)=>{
     res.json({originalValue: authentication , hashedValue:hash})
 })
 
+function generateToken(user){
+    
+    const payload={
+        username:user.username
+    }
 
+    const secret='is it secret, is it safe?'
+
+    const options = {
+        expiresIn:'1h'
+    }
+
+    return jwt.sign(payload, secret, options);
+}
 
 /////////////////////INSTRUCTOR////////////////////
 router.post('/instructor/register', (req, res) => {
@@ -36,11 +49,13 @@ router.post("/instructor/login", (req, res) => {
     Instructor.findInstructorBy({ username })
       .first()
       .then(user => {
+          const token=generateToken(user);
           console.log(user);
           res.status(200).json({
               Welcome: user.name,
               contactInfo:user.contactInfo,
-              status:user.status
+              status:user.status,
+              token,
           });
       })
       .catch(error => {
