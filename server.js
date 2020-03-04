@@ -1,3 +1,5 @@
+const cors=require('cors');
+
 const express = require('express');
 
 const  auth_router=require('./auth/auth-router');
@@ -13,7 +15,7 @@ const clazz=require('./users/class/class-router');
 const server = express();
 
 server.use(express.json());
-
+server.use(cors());
 
 server.use('/api', auth_router);
 

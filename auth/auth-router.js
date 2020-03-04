@@ -1,10 +1,25 @@
 const router = require('express').Router();
 const Instructor=require('./auth-model');
+const bcrypt=require('bcryptjs');
+
+
+router.get('/hash', (req,res)=>{
+    const authentication=req.headers.authentication;
+  
+  
+    const hash=bcrypt.hashSync(authentication, 12);
+  
+  
+    res.json({originalValue: authentication , hashedValue:hash})
+})
+
 
 
 /////////////////////INSTRUCTOR////////////////////
-router.post('/instuctor/register', (req, res) => {
+router.post('/instructor/register', (req, res) => {
     const usersInfo = req.body;
+    const hash=bcrypt.hashSync(usersInfo.password, 8);
+    usersInfo.password=hash;
     Instructor.addInstructor(usersInfo).then(user=>{
         res.status(201).json(user);
     }).catch(err=>{
@@ -12,6 +27,7 @@ router.post('/instuctor/register', (req, res) => {
         res.status(500).json({errorMessage:'Post Failed'})
     })
 });
+
   
   
   

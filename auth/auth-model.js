@@ -15,7 +15,7 @@ function findInstructorBy(filter) {
 }
 
 function addInstructor(user) {
-  return db('client')
+  return db('instructor')
     .insert(user)
     // .then(ids => ({ id: ids[0] }));
     .then(ids => ({ ids }));
