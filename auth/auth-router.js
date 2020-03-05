@@ -3,15 +3,7 @@ const Instructor=require('./auth-model');
 const bcrypt=require('bcryptjs');
 const jwt=require('jsonwebtoken');
 
-router.get('/hash', (req,res)=>{
-    const authentication=req.headers.authentication;
-  
-  
-    const hash=bcrypt.hashSync(authentication, 12);
-  
-  
-    res.json({originalValue: authentication , hashedValue:hash})
-})
+
 
 function generateToken(user){
     
@@ -22,7 +14,7 @@ function generateToken(user){
     const secret='is it secret, is it safe?'
 
     const options = {
-        expiresIn:'1h'
+        expiresIn:'5h'
     }
 
     return jwt.sign(payload, secret, options);

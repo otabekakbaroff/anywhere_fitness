@@ -2,6 +2,8 @@ const cors=require('cors');
 
 const express = require('express');
 
+const restrict=require('./middleware/restrict')
+
 const  auth_router=require('./auth/auth-router');
 
 const instructor = require('./users/instructor/instructor-router');
@@ -17,13 +19,13 @@ const server = express();
 server.use(express.json());
 server.use(cors());
 
-server.use('/api', auth_router);
+server.use('/api/auth', auth_router);
 
-server.use('/api/instructors', instructor);
+server.use('/api/instructors', restrict, instructor);
 
-server.use('/api/clients', client);
+server.use('/api/clients', restrict, client);
 
-server.use('/api/classes', clazz);
+server.use('/api/classes', restrict, clazz);
 
 // server.use('/api/payment', payment);
 
