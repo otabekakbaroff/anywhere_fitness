@@ -1,5 +1,7 @@
 const cors=require('cors');
 
+const helmet=require('helmet');
+
 const express = require('express');
 
 const restrict=require('./middleware/restrict')
@@ -17,6 +19,9 @@ const clazz=require('./users/class/class-router');
 const server = express();
 
 server.use(express.json());
+
+server.use(helmet());
+
 server.use(cors());
 
 server.use('/api/auth', auth_router);
@@ -46,3 +51,20 @@ server.get('/hello', (req,res)=>{
 })
 
 module.exports = server;
+
+// function access_permision(role){
+//     return (req,res,next)=>{
+//         if(req.decodedToken && req.decodedToken.role && req.decodedToken.toLowerCase() ===role){
+//             next();
+//         }else{
+//             res.status(403).json({Wrong:'Access-Permision Denied!'});
+//         }
+//     }
+// }
+
+
+
+
+
+
+

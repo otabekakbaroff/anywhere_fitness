@@ -35,7 +35,7 @@ router.put('/:id', (req, res) => {
     }).catch(err=>{
         res.status(500).json({errorMessage:'ERROR'})
     })
-  });
+});
   
 
 //DELETE ACTION 
