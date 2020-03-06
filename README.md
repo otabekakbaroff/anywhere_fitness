@@ -1,3 +1,5 @@
+# NEEDS TO BE UPDATED(WRONG ENDPOINTS FOR NOW) #
+
 # anywhere_fitness
 
 # GET REQUESTS # 
