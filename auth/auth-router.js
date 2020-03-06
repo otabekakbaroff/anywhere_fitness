@@ -28,7 +28,6 @@ router.post('/instructor/register', (req, res) => {
     Instructor.addInstructor(usersInfo).then(user=>{
         res.status(201).json(user);
     }).catch(err=>{
-        console.log(err);
         res.status(500).json({errorMessage:'Post Failed'})
     })
 });
@@ -42,7 +41,6 @@ router.post("/instructor/login", (req, res) => {
       .first()
       .then(user => {
           const token=generateToken(user);
-          console.log(user);
           res.status(200).json({
               Welcome: user.name,
               contactInfo:user.contactInfo,
