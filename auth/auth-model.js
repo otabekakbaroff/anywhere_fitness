@@ -11,7 +11,7 @@ module.exports = {
 
 
 function findInstructorBy(filter) {
-  console.log(db);
+  console.log(db.select('*'));
   return db('instructor').where(filter);
 }
 
