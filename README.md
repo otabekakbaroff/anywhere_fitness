@@ -2,7 +2,7 @@
 
 
 
-# REPLACE http://localhost:5000  to https://anywherefitnezz.herokuapp.com/ 
+# REPLACE http://localhost:5000  to https://anywherefitnezz.herokuapp.com/  TO ACCESS IT ONLINE 
  
 
 
