@@ -26,11 +26,11 @@ server.use(cors());
 
 server.use('/api/auth', auth_router);
 
-server.use('/api/instructors', restrict, instructor);
+server.use('/api/instructors', /*restrict,*/ instructor);
 
-server.use('/api/clients', restrict, client);
+server.use('/api/clients', /*restrict,*/ client);
 
-server.use('/api/classes', restrict, clazz);
+server.use('/api/classes', /*restrict,*/ clazz);
 
 // server.use('/api/payment', payment);
 

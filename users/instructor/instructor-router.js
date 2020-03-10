@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
         res.status(200).json(user);
     }).catch(err=>{
         console.log(err);
-        res.status(500).json({errorMessage:'Something Went Wrong'})
+        res.status(500).json({errorMessage:'Can\'t get instructors Because there\'s something wrong with DATABASE'})
     })
 });
 
