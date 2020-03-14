@@ -26,11 +26,11 @@ server.use(cors());
 
 server.use('/api/auth', auth_router);
 
-server.use('/api/instructors', /*restrict,*/ instructor);
+server.use('/api/instructors', restrict, instructor);
 
-server.use('/api/clients', /*restrict,*/ client);
+server.use('/api/clients', restrict, client);
 
-server.use('/api/classes', /*restrict,*/ clazz);
+server.use('/api/classes', restrict, clazz);
 
 // server.use('/api/payment', payment);
 
@@ -50,19 +50,8 @@ server.get('/hello', (req,res)=>{
 
 })
 
+
 module.exports = server;
-
-// function access_permision(role){
-//     return (req,res,next)=>{
-//         if(req.decodedToken && req.decodedToken.role && req.decodedToken.toLowerCase() ===role){
-//             next();
-//         }else{
-//             res.status(403).json({Wrong:'Access-Permision Denied!'});
-//         }
-//     }
-// }
-
-
 
 
 
