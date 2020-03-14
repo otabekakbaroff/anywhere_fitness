@@ -1,4 +1,4 @@
-auth
+.auth.spec.js
 # Logs
 logs
 *.log
