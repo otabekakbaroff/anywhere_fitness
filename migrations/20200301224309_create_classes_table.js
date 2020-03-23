@@ -13,7 +13,7 @@ exports.up = function(knex) {
 
         table.string('location', 256).notNullable();
 
-        table.string('dateAndTime',256).notNullable().unique();
+        table.string('dateAndTime',256).notNullable();
 
         table.boolean('active').defaultTo(true);
 
@@ -24,7 +24,7 @@ exports.up = function(knex) {
         .references("id")
         .inTable("instructor")
         .onUpdate("CASCADE") 
-        .onDelete("CASCADE");
+        .onDelete("RESTRICT");
 
       });
     };

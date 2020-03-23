@@ -2,8 +2,6 @@ const express = require('express');
 const router = express.Router();
 const client=require("./client-model");
 
-
-
 //GET ALL clients
 router.get('/', (req, res) => {
     client.find().then(user=>{

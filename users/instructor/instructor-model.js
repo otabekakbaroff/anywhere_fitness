@@ -4,6 +4,7 @@ const db=require('../../data/dbconfig');
 module.exports = {
     find,
     findById,
+    InstructorCreatedClasses,
     update,
     remove,
 };
@@ -17,7 +18,12 @@ function findById(id) {
       .where({ id: Number(id) })
       .first();
 }
-   
+
+function InstructorCreatedClasses(id){
+    return db("class")
+        .where("class.instructor_id", id)
+}
+
   
 function update(id, user) {
     return db('instructor')

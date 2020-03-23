@@ -4,7 +4,6 @@ const db=require('../../data/dbconfig');
 module.exports={
     find,
     findById,
-    findAllClients,
     add,
     update,
     remove
@@ -14,7 +13,7 @@ function find() {
     return db("class");
 }
 
-  
+
   
 function findById(id) {
     return db("class")
@@ -39,10 +38,3 @@ function remove(id) {
       .del();
 }
 
-
-function findAllClients(id) {
-    return db("client")
-      .join("class", "class.id", "client.class_id")
-      .select("client.name", "client.contactInfo")
-      .where("class_id", id);
-}

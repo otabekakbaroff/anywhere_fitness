@@ -3,7 +3,9 @@ exports.up = function(knex) {
 
         table.increments();
         
-        table.string('name', 255).notNullable().index();
+        table.string('firstname', 255).notNullable().index();
+
+        table.string('lastname', 255).notNullable();
 
         table.string('contactInfo',255);
 

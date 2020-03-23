@@ -26,8 +26,13 @@ router.post('/instructor/register', (req, res) => {
     const hash=bcrypt.hashSync(usersInfo.password, 8);
     usersInfo.password=hash;
     Instructor.addInstructor(usersInfo).then(user=>{
-        res.status(201).json(user);
+        const token=generateToken(user);
+        res.status(201).json({
+            user,
+            token
+        });
     }).catch(err=>{
+        console.log(err);
         res.status(500).json({errorMessage:'Post Failed'})
     })
 });
@@ -42,7 +47,9 @@ router.post("/instructor/login", (req, res) => {
       .then(user => {
           const token=generateToken(user);
           res.status(200).json({
-              Welcome: user.name,
+              id:user.id,
+              Welcome: user.firstname,
+              lastname: user.lastname,
               contactInfo:user.contactInfo,
               status:user.status,
               token,
@@ -57,8 +64,11 @@ router.post("/instructor/login", (req, res) => {
 ///////////////////////CLIENT//////////////////////////////
 router.post('/client/register', (req, res) => {
     const usersInfo = req.body;
+    const hash=bcrypt.hashSync(usersInfo.password, 8);
+    usersInfo.password=hash;
     Instructor.addClient(usersInfo).then(user=>{
-        res.status(201).json(user);
+        const token=generateToken(user);
+        res.status(201).json({user,token});
     }).catch(err=>{
         console.log(err);
         res.status(500).json({errorMessage:'Post Failed'})
@@ -72,11 +82,14 @@ router.post("/client/login", (req, res) => {
     Instructor.findClientBy({ username })
       .first()
       .then(user => {
-          console.log(user);
+        console.log(user);
+        const token=generateToken(user);
           res.status(200).json({
-              Welcome: user.name,
+              id:user.id,
+              Welcome: user.firstname,
+              lastname:user.lastname,
               contactInfo:user.contactInfo,
-              status:user.status
+              token,
           });
       })
       .catch(error => {

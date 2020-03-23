@@ -4,7 +4,7 @@ const helmet=require('helmet');
 
 const express = require('express');
 
-const restrict=require('./middleware/restrict')
+// const restrict=require('./middleware/restrict')
 
 const  auth_router=require('./auth/auth-router');
 
@@ -13,6 +13,8 @@ const instructor = require('./users/instructor/instructor-router');
 const client=require('./users/client/client-router');
 
 const clazz=require('./users/class/class-router');
+
+const join=require('./users/join/join-router');
 
 // const payment=require('./users/payment/payment-router');
 
@@ -26,11 +28,13 @@ server.use(cors());
 
 server.use('/api/auth', auth_router);
 
-server.use('/api/instructors', restrict, instructor);
+server.use('/api/instructors', /*restrict,*/ instructor);
 
-server.use('/api/clients', restrict, client);
+server.use('/api/clients',  /*restrict, */ client);
 
-server.use('/api/classes', restrict, clazz);
+server.use('/api/classes',  /*restrict,*/ clazz);
+
+server.use('/api/access', /*restrict*/ join);
 
 // server.use('/api/payment', payment);
 

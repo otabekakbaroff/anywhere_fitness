@@ -3,7 +3,9 @@ exports.up = function(knex) {
 
         table.increments();
 
-        table.string('name', 256),
+        table.string('firstname', 256).notNullable().index();
+
+        table.string('lastname',256).notNullable();
 
         table.string('contactInfo',255);
 
@@ -14,13 +16,6 @@ exports.up = function(knex) {
         
         table.string('password', 255).notNullable();
 
-        table
-        .integer("class_id") 
-        .unsigned() 
-        .references("id")
-        .inTable("class")
-        .onUpdate("CASCADE") 
-        .onDelete("CASCADE");
       });
     };
 
