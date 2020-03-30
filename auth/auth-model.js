@@ -15,7 +15,7 @@ function findInstructorBy(filter) {
 function addInstructor(user) {
   return db('instructor')
     .insert(user)
-    .then(id => ( {user,id}));
+    .then(id => (id));
 }
 
 
@@ -26,5 +26,5 @@ function findClientBy(filter) {
 function addClient(user) {
   return db('client')
     .insert(user)
-    .then(id => ( {user,id}));
+    .then(id => (id));
 }
