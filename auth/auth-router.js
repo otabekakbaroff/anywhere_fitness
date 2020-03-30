@@ -28,7 +28,10 @@ router.post('/instructor/register', (req, res) => {
     Instructor.addInstructor(usersInfo).then(user=>{
         const token=generateToken(user);
         res.status(201).json({
-            user,
+            firstname:user.user.firstname,
+            lastname:user.user.lastname,
+            status:user.user.status,
+            id:user.id[0],
             token
         });
     }).catch(err=>{
@@ -68,7 +71,12 @@ router.post('/client/register', (req, res) => {
     usersInfo.password=hash;
     Instructor.addClient(usersInfo).then(user=>{
         const token=generateToken(user);
-        res.status(201).json({user,token});
+        res.status(201).json({ 
+            firstname:user.user.firstname,
+            lastname:user.user.lastname,
+            id:user.id[0],
+            token
+        });
     }).catch(err=>{
         console.log(err);
         res.status(500).json({errorMessage:'Post Failed'})
