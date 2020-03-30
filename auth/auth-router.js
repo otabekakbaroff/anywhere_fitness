@@ -28,11 +28,12 @@ router.post('/instructor/register', (req, res) => {
     Instructor.addInstructor(usersInfo).then(user=>{
         const token=generateToken(user);
         res.status(201).json({
-            firstname:user.user.firstname,
-            lastname:user.user.lastname,
-            status:user.user.status,
-            id:user.id[0],
-            token
+            user
+            // firstname:user.user.firstname,
+            // lastname:user.user.lastname,
+            // status:user.user.status,
+            // id:user.id[0],
+            // token
         });
     }).catch(err=>{
         console.log(err);
