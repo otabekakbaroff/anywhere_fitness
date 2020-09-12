@@ -46,7 +46,13 @@ server.get('/', (req,res)=>{
     res.status(200).json(test);
 
 })
+server.get('/admit', (req,res)=>{
 
+    const test=[{Message:`*** Restricted Page, Admins Only ***`}]
+
+    res.status(200).json(test);
+
+})
 
 module.exports = server;
 
