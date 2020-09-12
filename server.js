@@ -46,10 +46,11 @@ server.get('/', (req,res)=>{
     res.status(200).json(test);
 
 })
-server.get('/admit', (req,res)=>{
+server.get('/admin', (req,res)=>{
 
     const test=[{Message:`*** Restricted Page, Admins Only ***`}]
-
+    console.log(process.env.NODE_ENV)
+    console.log(process.env.DATABASE_URL)
     res.status(200).json(test);
 
 })
