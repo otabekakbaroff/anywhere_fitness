@@ -28,10 +28,10 @@ router.post('/instructor/register', (req, res) => {
     Instructor.addInstructor(usersInfo).then(user=>{
         const token=generateToken(user);
         res.status(201).json({
-            firstname:user.user.firstname,
-            lastname:user.user.lastname,
-            status:user.user.status,
-            id:user.id[0],
+            firstname:usersInfo.firstname,
+            lastname:usersInfo.lastname,
+            status:usersInfo.status,
+            id:user[0],
             token
         });
     }).catch(err=>{
@@ -72,9 +72,9 @@ router.post('/client/register', (req, res) => {
     Instructor.addClient(usersInfo).then(user=>{
         const token=generateToken(user);
         res.status(201).json({ 
-            firstname:user.user.firstname,
-            lastname:user.user.lastname,
-            id:user.id[0],
+            firstname:usersInfo.firstname,
+            lastname:usersInfo.lastname,
+            id:user[0],
             token
         });
     }).catch(err=>{
@@ -90,7 +90,6 @@ router.post("/client/login", (req, res) => {
     Instructor.findClientBy({ username })
       .first()
       .then(user => {
-        console.log(user);
         const token=generateToken(user);
           res.status(200).json({
               id:user.id,
