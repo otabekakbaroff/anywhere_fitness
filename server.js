@@ -48,7 +48,7 @@ server.get('/', (req,res)=>{
 })
 server.get('/admin', (req,res)=>{
 
-    const test=[{Message:`*** Restricted Page, Admins Only *** ${process.env.NODE_ENV} |<===>|${process.DATABASE_URL}`}]
+    const test=[{Message:`*** Restricted Page, Admins Only ***`}]
     res.status(200).json(test);
 
 })
