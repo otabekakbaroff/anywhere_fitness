@@ -11,10 +11,10 @@ function generateToken(user){
         username:user.username,
     }
 
-    const secret='is it secret, is it safe?'
+    const secret="keep this a secret"
 
     const options = {
-        expiresIn:'5h'
+        expiresIn:'8h'
     }
 
     return jwt.sign(payload, secret, options);
@@ -48,6 +48,7 @@ router.post("/instructor/login", (req, res) => {
     Instructor.findInstructorBy({ username })
       .first()
       .then(user => {
+          if (user && bcrypt.compareSync(password,user.password)){
           const token=generateToken(user);
           res.status(200).json({
               id:user.id,
@@ -57,6 +58,10 @@ router.post("/instructor/login", (req, res) => {
               status:user.status,
               token,
           });
+        }
+        else{
+            res.status(401).json({errorMessage: 'Invalid Credentials'})
+        }
       })
       .catch(error => {
         console.log(error);
@@ -90,6 +95,7 @@ router.post("/client/login", (req, res) => {
     Instructor.findClientBy({ username })
       .first()
       .then(user => {
+        if (user && bcrypt.compareSync(password,user.password)){
         const token=generateToken(user);
           res.status(200).json({
               id:user.id,
@@ -98,6 +104,10 @@ router.post("/client/login", (req, res) => {
               contactInfo:user.contactInfo,
               token,
           });
+        }
+        else{
+            res.status(401).json({errorMessage: 'Invalid Credentials'})
+        }
       })
       .catch(error => {
         console.log(error);
