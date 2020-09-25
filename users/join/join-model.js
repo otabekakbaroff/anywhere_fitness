@@ -45,7 +45,7 @@ function clientsInClasses(id){
     return db("join")
            .join("client", "client.id", "join.client_id")
            .join("class","class.id", "join.class_id")
-           .select("client.name","client.contactInfo")
+           .select("client.firstname","client.lastname","client.contactInfo")
            .where("class.id", id)
            .then(clients=>({clients}))
 }
