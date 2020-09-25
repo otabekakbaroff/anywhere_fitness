@@ -14,15 +14,6 @@ router.get('/', (req, res) => {
 });
 
 
-//GET class BY ID
-router.get('/:id', (req, res) => {
-    const { id } = req.params;
-    join.findById(id).then(clazs=>{
-        res.status(200).json(clazs);
-    }).catch(err=>{
-        res.status(500).json({errorMessage:'Something Went Wrong'})
-    })
-});
 //GET ALL CLASSES FOR A CLIENT
 router.get('/:id/classes', (req, res) => {
     const { id } = req.params;
@@ -39,6 +30,7 @@ router.get('/:id/clients', (req, res) => {
     join.clientsInClasses(id).then(clazs=>{
         res.status(200).json(clazs);
     }).catch(err=>{
+        console.log(err)
         res.status(500).json({errorMessage:'Something Went Wrong'})
     })
 });
