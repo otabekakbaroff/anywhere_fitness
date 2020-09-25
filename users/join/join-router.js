@@ -20,6 +20,7 @@ router.get('/:id/classes', (req, res) => {
     join.classesForClients(id).then(clazs=>{
         res.status(200).json(clazs);
     }).catch(err=>{
+        console.log(err)
         res.status(500).json({errorMessage:'Something Went Wrong'})
     })
 });
@@ -55,6 +56,7 @@ router.put('/:id', (req, res) => {
     join.update(id,actionInfo).then(clazs=>{
         res.status(201).json(clazs);
     }).catch(err=>{
+        console.log(err)
         res.status(500).json({errorMessage:'ERROR'})
     })
   });
@@ -66,6 +68,7 @@ router.delete('/:id', (req, res) => {
     join.remove(id).then(clazs=>{
         res.status(201).json(clazs);
     }).catch(err=>{
+        console.log(err)
         res.status(500).json({errorMessage:'FAILED TO DELETE'})
     })
 });
