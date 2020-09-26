@@ -31,7 +31,6 @@ router.post('/instructor/register', (req, res) => {
             firstname:usersInfo.firstname,
             lastname:usersInfo.lastname,
             status:usersInfo.status,
-            id:user,
             token
         });
     }).catch(err=>{
@@ -79,7 +78,6 @@ router.post('/client/register', (req, res) => {
         res.status(201).json({ 
             firstname:usersInfo.firstname,
             lastname:usersInfo.lastname,
-            id:user[0],
             token
         });
     }).catch(err=>{
