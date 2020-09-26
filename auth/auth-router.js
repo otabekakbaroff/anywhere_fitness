@@ -56,6 +56,7 @@ router.post("/instructor/login", (req, res) => {
               lastname: user.lastname,
               contactInfo:user.contactInfo,
               status:user.status,
+              id:user[0],
               token,
           });
         }
@@ -102,6 +103,7 @@ router.post("/client/login", (req, res) => {
               Welcome: user.firstname,
               lastname:user.lastname,
               contactInfo:user.contactInfo,
+              id:user[0],
               token,
           });
         }
