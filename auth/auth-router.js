@@ -31,7 +31,7 @@ router.post('/instructor/register', (req, res) => {
             firstname:usersInfo.firstname,
             lastname:usersInfo.lastname,
             status:usersInfo.status,
-            id:user[0],
+            id:user,
             token
         });
     }).catch(err=>{
