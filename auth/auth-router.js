@@ -89,7 +89,7 @@ router.post('/client/register', (req, res) => {
   
   
 router.post("/client/login", (req, res) => {
-    let { username, password } = req.body;
+    const { username, password } = req.body;
     Instructor.findClientBy({ username })
       .first()
       .then(user => {

@@ -12,7 +12,6 @@ router.get('/', (req, res) => {
         res.status(200).json(user);
     }).catch(err=>{
         console.log(err);
-        console.log(process.env.DATABASE_URL)
         res.status(500).json({errorMessage:'Can\'t get instructors Because there\'s something wrong with DATABASE'})
     })
 });
